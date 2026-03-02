@@ -1,8 +1,22 @@
-<template>
-  <div id="app"></div>
-</template>
+<script setup>
+import { ref, computed } from "vue";
+const inputMinutes = ref(0);
+</script>
 
-<script setup></script>
+<template>
+  <div id="app">
+    <div>
+      <label for="timeInput">カウントダウン時間（分）：</label>
+      <input
+        id="timeInput"
+        type="number"
+        v-model.number="inputMinutes"
+        step="1"
+        min="0"
+      />
+    </div>
+  </div>
+</template>
 
 <style>
 html,
