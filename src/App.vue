@@ -1,47 +1,66 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div id="app"></div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<script setup></script>
+
+<style>
+html,
+body {
+  margin: 0;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.timer {
+  font-size: 2.5em;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #4caf50;
+}
+div > div {
+  margin-bottom: 15px;
+}
+label {
+  margin-right: 10px;
+}
+input[type="number"] {
+  font-size: 1em;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 80px;
+  box-sizing: border-box;
+}
+.controls {
+  display: flex;
+  gap: 10px;
+}
+button {
+  cursor: pointer;
+  font-size: 1em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2196f3;
+  color: white;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #1976d2;
+}
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 </style>
